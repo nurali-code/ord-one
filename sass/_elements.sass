@@ -1,0 +1,89 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+:root
+    --prime: 48, 63, 159
+    --white: #ffffff
+    --black: 47,47,47
+    --dark: #000
+    --gray: #747474
+    --neutral: #C3C3C3
+    --green: #2EA90C
+    --red: #E61717
+    --bg: #FAFAFA
+
+$alfa: rgba(0, 0, 0, 0)
+$prime: rgb(var(--prime))
+$black: rgb(var(--black))
+$dark: rgb(var(--dark))
+$white: var(--white)
+$gray: var(--gray)
+$neutral: var(--neutral)
+$green: var(--green)
+$red: var(--red)
+$bg: var(--bg)
+
+body, html
+    font-family: "Ubuntu", sans-serif
+    font-weight: 400
+    font-style: normal
+    font-optical-sizing: auto
+    color: $black
+    background-color: #EDEDED
+
+body
+    min-height: 100vh
+    position: relative
+    z-index: 1
+
+img
+    display: block
+    max-width: 100%
+
+a,
+button
+    color: $black
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:hover
+        opacity: .5
+
+    &:active
+        opacity: 1
+        transform: scale(.98)
+
+p
+    font-family: Ubuntu
+    font-weight: 300
+    font-size: 15.03px
+    line-height: 33.82px
+
+    margin-bottom: 12px
+
+
+.link
+    font-size: 16px
+    line-height: 100%
+    color: $prime
+    &:hover
+        text-decoration: underline
+
+    @media screen and ( max-width: 720px )
+        font-size: 14px
+
+
+ul
+    list-style: none
+
+section
+    padding: 50px 0
+    @media screen and ( max-width: 1100px )
+        padding: 30px 0
+
+    @media screen and ( max-width: 720px )
+        padding: 20px 0
