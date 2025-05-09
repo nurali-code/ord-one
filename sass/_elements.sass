@@ -32,7 +32,33 @@ img
     @media screen and (max-width: 992px)
         max-width: 700px
 
-    
+.inp
+    &-rad
+        position: relative
+        z-index: 1
+        label
+            &::before
+                content: ""
+                display: block
+                width: 100%
+                height: 100%
+                background-color: #FAFAFA
+                border-radius: 5px
+                position: absolute
+                top: 0
+                left: 0
+                z-index: -1
+                
+        input
+            width: 100%
+            height: 100%
+            opacity: 0
+            position: absolute
+            top: 0
+            left: 0
+            cursor: pointer
+
+
 a,
 button
     color: #000
