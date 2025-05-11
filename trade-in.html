@@ -6,30 +6,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ваш заказ принят и обрабатывается!</title>
     <meta name="robots" content="noindex, nofollow">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <main class="container">
         <section>
-            <h1 class="order__title">Выгодный Trade-In</h1>
-            <p class="order__description">Сдай старое и получи новое со скидкой до 80%</p>
+            <h1 class="h1">Выгодный Trade-In</h1>
+            <p class="descr">Сдай старое и получи новое со скидкой до 80%</p>
 
-            <div class="info">
+            <div class="info bg">
                 <div class="info__title">
                     <h2 class="h_03">Trade-In</h2>
                     <p>
                         Мы принимаем все модели iPhone, iPad, AirPods, Apple Watch и ноутбуки MacBook.
-                        Важно: гаджет должен быть в рабочем состоянии он должен включаться.Отключены блокировки и нет
+                        <br>
+                        <br>
+                        Важно: гаджет должен быть в рабочем состоянии он должен включаться. <br>
+                        Отключены блокировки и нет
                         привязки к аккаунтам.
                     </p>
+                    <a href="#" class="btn">
+                        Некогда заполнять анкету <br>
+                        звоните мне срочно
+                    </a>
                 </div>
-                <div class="info-img">
+                <div class="info__img">
+                    <p class="info__img-title">
+                        Эксперты <br>
+                        <b>Adept Apple</b>
+                    </p>
                     <img src="img/inf.jpg" alt="info" loading="lazy">
                 </div>
             </div>
+
+            <form action="#">
+                <div class="f__section --tripple bg">
+                    <div class="f__col">
+                        <h3 class="h_03 fieldset__label">
+                            <span class="num">1</span> Выберите модель
+                        </h3>
+                        <div class="f__row --first">
+                            <div class="f__list">
+                                <span class="f__label">Серия</span>
+                                <fieldset aria-required="true" class="--double">
+                                    <div class="radio">
+                                        <input type="radio" name="siries">
+                                        <label>11</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="siries">
+                                        <label>12</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="siries">
+                                        <label>13</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="siries">
+                                        <label>14</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="siries">
+                                        <label>15</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="siries">
+                                        <label>16</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <hr>
+                            <div class="f__list">
+                                <span class="f__label">Модель</span>
+                                <fieldset aria-required="true" class="--double">
+                                    <div class="radio">
+                                        <input type="radio" name="model">
+                                        <label>Pro Max</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="model">
+                                        <label>Mini</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="model">
+                                        <label>Pro</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="model">
+                                        <label>Plus</label>
+                                    </div>
+                                    <div class="other">
+                                        <div class="radio">
+                                            <input type="radio" name="model">
+                                            <label>Другое</label>
+                                        </div>
+                                        <input type="text" class="other__inp" name="other" placeholder="Введите модель">
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f__col">
+                        <h3 class="h_03 fieldset__label">
+                            <span class="num">2</span> Выберите память
+                        </h3>
+                        <div class="f__row">
+                            <fieldset aria-required="true" class="--double">
+                                <div class="radio">
+                                    <input type="radio" name="ram">
+                                    <label>64</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="ram">
+                                    <label>128</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="ram">
+                                    <label>256</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="ram">
+                                    <label>512</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="ram">
+                                    <label>1 TB</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="ram">
+                                    <label>2 TB</label>
+                                </div>
+                            </fieldset>
+                            <hr>
+                            <div class="f__descr">
+                                <h4 class="f__descr-heading">Где посмотреть?</h4>
+                                <p class="f__descr-text">
+                                    Откройте "Настройки".
+                                    Перейдите в раздел "Аккумулятор".
+                                    Выберите пункт "Состояние аккумулятора"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f__col">
+                        <h3 class="h_03 fieldset__label">
+                            <span class="num">3</span> Состояние аккумулятора
+                        </h3>
+                        <div class="f__row">
+                            <fieldset aria-required="true">
+                                <div class="radio">
+                                    <input type="radio" name="batery">
+                                    <label>90%-100%</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="batery">
+                                    <label>80%-90%</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="batery">
+                                    <label>70%-80%</label>
+                                </div>
+                            </fieldset>
+                            <hr>
+                            <div class="f__descr">
+                                <h4 class="f__descr-heading">Где посмотреть?</h4>
+                                <p class="f__descr-text">
+                                    Откройте "Настройки".
+                                    Перейдите в раздел "Аккумулятор".
+                                    Выберите пункт "Состояние аккумулятора"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </section>
+
+
     </main>
 </body>
 

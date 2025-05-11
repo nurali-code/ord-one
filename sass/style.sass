@@ -1,6 +1,63 @@
 @import 'normolize'
 @import 'elements'
 
+.h1
+    font-weight: 300
+    font-size: 60px
+    letter-spacing: -1.1px
+    margin: 0 0 30px
+    text-align: center
+    @media screen and (max-width: 1800px)
+        font-size: 48px
+        letter-spacing: -.8px
+        margin-bottom: 20px
+
+    @media screen and (max-width: 1200px)
+        font-size: 32px
+        margin-bottom: 10px
+        letter-spacing: -.4px
+
+    @media screen and (max-width: 720px)
+        font-size: 24px
+        letter-spacing: -.1px
+
+.h_03
+    font-weight: 300
+    font-size: 24px
+    line-height: 120%
+    margin: 0 0 20px
+    .num
+        font-size: 40px
+    @media screen and ( max-width: 992px )
+        font-size: 22px
+        margin-bottom: 14px
+        .num
+            font-size: 32px
+    @media screen and ( max-width: 720px )
+        font-size: 20px
+        margin-bottom: 10px
+        .num
+            font-size: 26px
+
+.descr
+    font-weight: 300
+    text-align: center
+    font-size: 40px
+    letter-spacing: -.8px
+    margin-bottom: 90px
+    @media screen and (max-width: 1800px)
+        font-size: 28px
+        margin-bottom: 50px
+        letter-spacing: -.4px
+    @media screen and (max-width: 1200px)
+        font-size: 20px
+        letter-spacing: -.1px
+        margin-bottom: 30px
+    @media screen and (max-width: 720px)
+        font-size: 18px
+        margin-bottom: 20px
+        letter-spacing: -.1px
+
 .order
     text-align: center
 
@@ -71,18 +128,6 @@
             flex: 1
             margin-bottom: 0
 
-    &__title
-        font-weight: 300
-        font-size: 60px
-        letter-spacing: -1.1px
-        margin: 0 0 30px
-
-    &__description
-        font-weight: 300
-        font-size: 40px
-        letter-spacing: -.8px
-        margin-bottom: 90px
-
     &-row
         margin-bottom: 30px
         &:last-child
@@ -95,9 +140,8 @@
         text-decoration: underline
         text-decoration-style: dotted
         text-underline-offset: 3px
-        
-@media screen and (max-width: 1800px)
-    .order
+
+    @media screen and (max-width: 1800px)
         &__content
             padding: 30px 26px
 
@@ -109,21 +153,13 @@
             width: calc( 450 / (1100 - (20 * 2)) *100% )
         &__img
             width: calc( 580 / (1100 - (20 * 2)) *100% )
-        &__title
-            font-size: 48px
-            letter-spacing: -.8px
-            margin-bottom: 20px
-        &__description
-            font-size: 28px
-            margin-bottom: 50px
-            letter-spacing: -.4px
+
         &__box
             padding: 20px 24px
             border-radius: 18px
             margin-bottom: 20px
-            
 
-        &__list 
+        &__list
             margin-bottom: 20px
         &__total
             font-size: 15px
@@ -133,18 +169,7 @@
         &__link
             margin-top: 20px
 
-@media screen and (max-width: 1200px)
-    .order
-
-        &__title
-            font-size: 32px
-            margin-bottom: 10px
-            letter-spacing: -.4px
-        &__description
-            font-size: 20px
-            letter-spacing: -.1px
-            margin-bottom: 30px
-
+    @media screen and (max-width: 1200px)
         &__list, &__text
             font-size: 13px
         &__total
@@ -152,8 +177,7 @@
         &__contact
             gap: 8px
 
-@media screen and (max-width: 992px)
-    .order
+    @media screen and (max-width: 992px)
         &__content
             display: block
         &__content-left,
@@ -168,32 +192,17 @@
             &:last-child
                 margin-bottom: 0
 
-        
-
-@media screen and (max-width: 720px)
-    .order
-        &__box 
+    @media screen and (max-width: 720px)
+        &__box
             border-radius: 9px
 
         &__content
             padding: 15px
 
-        &__title
-            font-size: 20px
-            letter-spacing: -.1px
-
-        &__description
-            font-size: 18px
-            margin-bottom: 20px
-            letter-spacing: -.1px
-
-        &__title
-            font-size: 24px
-
-        &__img 
+        &__img
             border-radius: 9px
 
-        &__list 
+        &__list
             margin: 14px 0 16px
             li
                 margin-bottom: 4px
@@ -206,7 +215,229 @@
         &__contact
             font-size: 14px
 
-        
-            
-            
-            
+.info,
+.info__title
+    display: flex
+
+.bg
+    border-radius: var(--br-xl)
+    padding: 37px 30px
+    background-color: #FAFAFA
+    margin-bottom: 26px
+    @media screen and ( max-width: 1800px )
+        padding: 30px 26px
+
+    @media screen and ( max-width: 992px )
+        padding: 20px
+
+    @media screen and ( max-width: 720px )
+        padding: 15px
+
+.info
+    --item-w: 876
+    &>*
+        width: calc( var(--item-w) / (1432 - (30 * 2)) *100% )
+
+    &__img
+        position: relative
+        z-index: 1
+        margin-left: auto
+        overflow: hidden
+        border-radius: var(--br-lg)
+        &-title
+            position: absolute
+            bottom: 26px
+            left: 30px
+            z-index: 2
+            color: white
+            margin: 0
+
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__title
+        flex-direction: column
+        --item-w: 470
+        border-radius: var(--br-lg)
+        padding: 40px 52px
+        background-color: #ECECEC
+        p
+            margin-bottom: 30px
+
+        .btn
+            margin-top: auto
+
+    @media screen and ( max-width: 1800px )
+        &__img
+            --item-w: 800
+        &__title
+            --item-w: 546
+            padding: 25px 30px
+
+    @media screen and ( max-width: 992px )
+        flex-direction: column-reverse
+        gap: 20px
+        &__img
+            --item-w: 100%
+            margin: 0
+            &-title
+                left: 22px
+                bottom: 22px
+
+        &__title
+            --item-w: 100%
+            padding: 20px 20px
+
+    @media screen and ( max-width: 720px )
+        gap: 12px
+        &__img
+            &-title
+                left: 18px
+                bottom: 18px
+
+.f
+    &__section
+        flex-wrap: wrap
+        display: flex
+        gap: 40px 20px
+
+        &.--tripple
+            &>*
+                width: calc( 62%/2 - 20px )
+                &:first-child
+                    width: 34%
+
+    &__row
+        background-color: #fff
+        display: flex
+        align-items: center
+        gap: 22px
+        padding: 16px 30px
+        border-radius: var(--br-xl)
+        hr
+            width: 1px
+            height: 90px
+            align-self: center
+            background-color: #494646
+
+        &.--first
+            align-items: flex-start
+            hr
+                margin-top: 33px
+
+            &>*:first-child
+                width: 130px
+
+    &__label
+        display: block
+        width: 100% !important
+        font-weight: 300
+        font-size: 14px
+        line-height: 120%
+        color: #9C9C9C
+        margin: 0 0 16px
+
+    &__col
+        // width: fit-content
+
+    &__list
+        width: 60%
+
+    &__descr
+        color: #767575
+        line-height: 120%
+        max-width: 145px
+        &-heading
+            font-weight: 300
+            font-size: 16px
+            margin: 0 0 8px
+
+        &-text
+            font-weight: 200
+            font-size: 12px
+
+    @media screen and ( max-width: 1800px )
+        &__section
+            &.--tripple
+                &>*
+                    width: calc( 50% - 10px )
+                    &:first-child
+                        width: calc( 50% - 10px )
+
+                    &:last-child
+                        width: 100%
+                        .f__row
+                            align-items: center
+
+                        hr
+                            height: 47px
+
+        &__descr
+            max-width: 50%
+
+        &__row
+            &.--first>*:first-child
+                width: 50%
+
+            hr
+                height: 46px
+
+    @media screen and ( max-width: 992px )
+        &__col
+            width: 100% !important
+
+    @media screen and ( max-width: 720px )
+        &__section 
+            gap: 30px 20px
+        &__row 
+            padding: 24px 20px
+            flex-direction: column
+            hr 
+                height: 1px !important
+                width: 100%
+                margin: 0 auto !important
+
+        &__list 
+            width: 100% !important
+
+        &__descr 
+            max-width: 100%
+            width: 100%
+
+fieldset
+    display: flex
+    flex-wrap: wrap
+    width: fit-content
+    gap: 30px 25px
+    &.--double
+        &>*
+            min-width: calc(50% - 12.5px)
+    @media screen and ( max-width: 992px )
+        &.--double
+            gap: 18px
+            &>*
+                min-width: calc((100% - 36px) / 3)
+    @media screen and ( max-width: 720px )
+        gap: 20px
+        &.--double
+            &>*
+                width: fit-content
+                min-width: unset
+
+    .other
+        // width: 100%
+        align-items: center
+        display: flex
+        flex-wrap: wrap
+        gap: 20px 30px
+        &__inp
+            display: none
+            padding: 0 10px
+            font-size: 14px
+            min-height: unset
+            width: 130px
+            // min-width: 150px
+            height: 34px

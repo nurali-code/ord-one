@@ -5,6 +5,11 @@
     border: none
     outline: none
 
+:root
+    --br-lg: 32px
+    --br-xl: 24px
+    --br-md: 16px
+
 body, html
     font-family: "Ubuntu", sans-serif
     font-weight: 300
@@ -32,32 +37,48 @@ img
     @media screen and (max-width: 992px)
         max-width: 700px
 
-.inp
-    &-rad
-        position: relative
-        z-index: 1
-        label
-            &::before
-                content: ""
-                display: block
-                width: 100%
-                height: 100%
-                background-color: #FAFAFA
-                border-radius: 5px
-                position: absolute
-                top: 0
-                left: 0
-                z-index: -1
-                
-        input
-            width: 100%
-            height: 100%
-            opacity: 0
+.radio
+    position: relative
+    z-index: 1
+    padding-left: 26px
+    display: block
+    width: fit-content
+    label
+        line-height: 18px
+        font-size: 16px
+        font-weight: 300
+        white-space: nowrap
+        &::after,
+        &::before
+            content: ""
+            display: block
+            width: 16px
+            height: 16px
+            border: 1px solid #000
+            border-radius: 50%
             position: absolute
             top: 0
             left: 0
-            cursor: pointer
+            z-index: -1
 
+        &::after
+            background-color: #D8A7B6
+            border-color: rgba(0, 0, 0, 0)
+            transform: scale(0)
+
+    input
+        width: 100%
+        height: 100%
+        min-height: unset
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        cursor: pointer
+        &:checked
+            & + label
+                &::after
+                    transform: scale(.5)
 
 a,
 button
@@ -74,8 +95,8 @@ button
 
 p
     font-weight: 300
-    font-size: 15px
-    line-height: 150%
+    font-size: 16px
+    line-height: 145%
     margin-bottom: 12px
     &:last-child
         margin-bottom: 0
@@ -84,12 +105,14 @@ ul
     list-style: none
 
 section
-    padding: 50px 0
-    @media screen and ( max-width: 1100px )
-        padding: 30px 0
+    padding: 70px 0
+    @media screen and ( max-width: 1800px )
+        padding: 50px 0
 
+    @media screen and ( max-width: 992px )
+        padding: 40px 0
     @media screen and ( max-width: 720px )
-        padding: 20px 0
+        padding: 30px 0
 
 input, textarea
     border: 1px solid #EAEAEA
@@ -101,10 +124,46 @@ input, textarea
         color: #9C9C9C
 
 .btn
+    display: block
+    color: white
+    text-align: center
     font-weight: 300
     font-size: 18px
-    line-height: 100%
+    line-height: 130%
     padding: 15px 30px
-    min-height: 83px
+    // min-height: 83px
     background-color: #222
     border-radius: 7px
+
+@media screen and ( max-width: 1800px )
+    :root
+        --br-lg: 24px
+        --br-xl: 20px
+        --br-md: 14px
+
+    .btn
+        font-size: 16px
+
+@media screen and ( max-width: 992px )
+    :root
+        --br-lg: 20px
+        --br-xl: 18px
+        --br-md: 12px
+
+    p
+        font-size: 15px
+
+    .btn
+        font-size: 15px
+
+@media screen and ( max-width: 720px )
+    :root
+        --br-lg: 14px
+        --br-xl: 16px
+        --br-md: 12px
+
+    p
+        font-size: 14px
+
+    .btn
+        font-size: 14px
