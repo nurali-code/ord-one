@@ -1,25 +1,5 @@
-@import 'normolize'
+// @import 'normolize'
 @import 'elements'
-
-.h1
-    font-weight: 300
-    font-size: 60px
-    letter-spacing: -1.1px
-    margin: 0 0 30px
-    text-align: center
-    @media screen and (max-width: 1800px)
-        font-size: 48px
-        letter-spacing: -.8px
-        margin-bottom: 20px
-
-    @media screen and (max-width: 1200px)
-        font-size: 32px
-        margin-bottom: 10px
-        letter-spacing: -.4px
-
-    @media screen and (max-width: 720px)
-        font-size: 24px
-        letter-spacing: -.1px
 
 .h_03
     font-weight: 300
@@ -39,25 +19,6 @@
         .num
             font-size: 26px
 
-.descr
-    font-weight: 300
-    text-align: center
-    font-size: 40px
-    letter-spacing: -.8px
-    margin-bottom: 90px
-    @media screen and (max-width: 1800px)
-        font-size: 28px
-        margin-bottom: 50px
-        letter-spacing: -.4px
-    @media screen and (max-width: 1200px)
-        font-size: 20px
-        letter-spacing: -.1px
-        margin-bottom: 30px
-    @media screen and (max-width: 720px)
-        font-size: 18px
-        margin-bottom: 20px
-        letter-spacing: -.1px
-
 .order
     text-align: center
 
@@ -65,7 +26,7 @@
         font-weight: 300
         font-size: 22px
         line-height: 26px
-        margin-bottom: 6px
+        margin: 0 0 6px
 
     &__content,
     &__content-left
@@ -87,8 +48,9 @@
         font-size: 15px
         line-height: 150%
         margin-bottom: 8px
-    &:last-child
-        margin-bottom: 0
+
+        &:last-child
+            margin-bottom: 0
 
     &__img
         width: calc( 760 / (1432 - (38 * 2)) *100% )
@@ -105,6 +67,7 @@
         gap: 14px
 
     &__list
+        list-style: none
         margin: 22px 0 30px
         li
             margin-bottom: 10px
@@ -267,7 +230,7 @@
         p
             margin-bottom: 30px
 
-        .btn
+        .sect__btn
             margin-top: auto
 
     @media screen and ( max-width: 1800px )
@@ -390,20 +353,20 @@
             width: 100% !important
 
     @media screen and ( max-width: 720px )
-        &__section 
+        &__section
             gap: 30px 20px
-        &__row 
+        &__row
             padding: 24px 20px
             flex-direction: column
-            hr 
+            hr
                 height: 1px !important
                 width: 100%
                 margin: 0 auto !important
 
-        &__list 
+        &__list
             width: 100% !important
 
-        &__descr 
+        &__descr
             max-width: 100%
             width: 100%
 
