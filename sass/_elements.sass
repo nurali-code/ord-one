@@ -24,13 +24,16 @@ img
 //     @media screen and (max-width: 992px)
 //         max-width: 700px
 
-.radio
+.radio,
+.radio_2,
+.radio_3
     position: relative
     z-index: 1
     padding-left: 26px
     display: block
     width: fit-content
     label
+        display: block
         line-height: 18px
         font-size: 16px
         font-weight: 300
@@ -68,6 +71,40 @@ img
                 &::after
                     transform: scale(.5)
 
+.radio_2
+    padding: 0
+    label
+        text-decoration: underline
+        text-underline-offset: 2px
+        text-decoration-style: dotted
+        &::after,
+        &::before
+            display: none
+
+    input
+        &:checked
+            & ~ label
+                color: #888888
+
+.radio_3
+    padding: 0
+    label
+        font-weight: 300
+        font-size: 14px
+        line-height: 120%
+        padding: 5px 12px
+        border-radius: 8px
+        background-color: #EDEDED
+        border: 1.03px solid #00000012
+
+        &::after,
+        &::before
+            display: none
+
+    input
+        &:checked
+            & ~ label
+                background-color: #fff
 .sect
     font-family: "Ubuntu", sans-serif
     padding: 70px 0
@@ -183,3 +220,9 @@ img
 
     .btn
         font-size: 14px
+
+    .radio,
+    .radio_2,
+    .radio_3
+        label
+            white-space: normal

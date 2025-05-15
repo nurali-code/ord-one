@@ -12,9 +12,7 @@
         type="text/css" rel="stylesheet" />
     <link href="https://adeptapple.ru/bitrix/js/main/popup/dist/main.popup.bundle.min.css?170542666626598"
         type="text/css" rel="stylesheet" />
-    <link
-        href="https://adeptapple.ru/bitrix/cache/css/s1/alpha_s1/template_119a22b1a1933b1e4a625e4e87651a53/template_119a22b1a1933b1e4a625e4e87651a53_v1.css?1747080005631051"
-        type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="css/template.css" type="text/css" data-template-style="true" rel="stylesheet" />
     <link href="https://adeptapple.ru/bitrix/panel/main/popup.min.css?170542654620774" type="text/css"
         data-template-style="true" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -195,10 +193,158 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="f__section --double bg">
+                    <div class="f__col">
+                        <h3 class="h_03 fieldset__label">
+                            <span class="num">4</span> Выберите цвет
+                        </h3>
+                        <div class="f__row">
+                            <fieldset aria-required="true" class="--tripple">
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Синий</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Розовый</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Серый</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Белый</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Зеленый</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Золотой</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Черный</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Фиолетовый</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Красный</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="f__col">
+                        <h3 class="h_03 fieldset__label"><span class="num">5</span> Опишите дефекты (если есть)</h3>
+                        <div class="f__row">
+                            <p class="f__textarea-descr">
+                                Чем подробнее вы расскажете о внешнем состоянии вашего телефона тем меньше разочарований
+                                вас настигнет при очном осмотре
+                            </p>
+                            <textarea name="defects" class="f__textarea"
+                                placeholder="Опишите дефекты (если есть)"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f__section --double bg">
+                    <div class="f__col">
+                        <h3 class="h_03 fieldset__label">
+                            <span class="num">7</span> Комплект
+                        </h3>
+                        <div class="f__row">
+                            <fieldset aria-required="true" class="--single">
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Полный комплект (коробка, кабель)</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Телефон и оригинальный кабель</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="siries">
+                                    <label>Только телефон</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="f__col">
+                        <h3 class="h_03 fieldset__label"><span class="num">8</span> Выберите то, на что хотите поменять
+                            свой телефон</h3>
+                        <div class="f__row --single">
+                            <div class="f__input-wrap">
+                                <label class="f__label" for="trade-in">Вставьте ссылку или id товара</label>
+                                <input class="f__input" type="text" name="trade-in" id="trade-in"
+                                    placeholder="ID: 111111111">
+                            </div>
+                            <div class="f__mod">
+                                <p>Выберите модель:</p>
+                                <div class="radio_2">
+                                    <input type="radio" name="year">
+                                    <label>2024</label>
+                                </div>
+                                <div class="radio_2">
+                                    <input type="radio" name="year">
+                                    <label>2023</label>
+                                </div>
+                                <div class="radio_2">
+                                    <input type="radio" name="year">
+                                    <label>2022</label>
+                                </div>
+                                <div class="radio_2">
+                                    <input type="radio" name="year">
+                                    <label>2021</label>
+                                </div>
+                            </div>
+                            <div class="f__mod">
+                                <div class="radio_3">
+                                    <input type="radio" name="year">
+                                    <label>IPhone 16 Pro</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="year">
+                                    <label>iPhone 16e</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="year">
+                                    <label>IPhone 16 Plus</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="year">
+                                    <label>IPhone 16</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="year">
+                                    <label>IPhone 16 Pro Max</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f__section --single bg">
+                    <h3 class="h_03 fieldset__label"><span class="num">9</span> Заполните и отправьте форму</h3>
+                    <div class="f__column">
+                        <div class="f__row --double">
+                            <input type="text" name="name" class="f__input" id="name" placeholder="Имя">
+                            <input type="text" name="phone" class="f__input" id="phone" placeholder="Тел: +7">
+                        </div>
+                        <button class="sect__btn" type="submit">Отправить</button>
+                    </div>
+                    <div class="radio">
+                        <input type="checkbox" name="batery">
+                        <label>Соглашаюсь с условиями обработки и использования персональных данных</label>
+                    </div>
+                </div>
             </form>
         </section>
-
-
     </main>
 </body>
 
