@@ -3,18 +3,14 @@ $(function () {
         var isValid = true;
         var firstError = null;
         var checkedRadioNames = {};
-        // Снимаем предыдущие ошибки и output
+        // Снимаем предыдущие ошибки
         $(this).find('.--err').removeClass('--err');
-        $(this).find('fieldset output.radio-error').remove();
         // Проверяем все input, textarea и select внутри fieldset
         $(this).find('fieldset input, fieldset textarea, fieldset select').each(function () {
             var type = $(this).attr('type');
-            // Пропускаем скрытые и неактивные поля
             if ($(this).is(':hidden') || $(this).is(':disabled')) return;
-            // Для radio и checkbox: хотя бы один выбранный с этим name
             if ((type === 'radio' || type === 'checkbox') && $(this).attr('name')) {
                 var name = $(this).attr('name');
-                // Проверяем каждую группу только один раз
                 if (checkedRadioNames[name]) return;
                 checkedRadioNames[name] = true;
                 var $group = $("[name='" + name + "']");
@@ -26,7 +22,6 @@ $(function () {
                     isValid = false;
                 }
             } else if (type !== 'radio' && type !== 'checkbox') {
-                // Для остальных: просто не пустое значение
                 if (!$(this).val()) {
                     $(this).addClass('--err');
                     if (!firstError) firstError = $(this);
@@ -39,4 +34,12 @@ $(function () {
             e.preventDefault();
         }
     });
+
+    // Снимаем ошибку при изменении любого input внутри fieldset с ошибкой
+    $(document).on('input change', 'fieldset.--err input', function () {
+        var $fieldset = $(this).closest('fieldset');
+        $fieldset.removeClass('--err');
+        $fieldset.find('input').removeClass('--err');
+    });
 });
+
