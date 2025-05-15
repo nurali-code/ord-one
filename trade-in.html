@@ -62,7 +62,7 @@
                         <div class="f__row --first">
                             <div class="f__list">
                                 <span class="f__label">Серия</span>
-                                <fieldset aria-required="true" class="--double">
+                                <fieldset aria-required="true" class="f__fieldset --double">
                                     <div class="radio">
                                         <input type="radio" name="siries">
                                         <label>11</label>
@@ -87,12 +87,13 @@
                                         <input type="radio" name="siries">
                                         <label>16</label>
                                     </div>
+                                    <output class="f__err">Выберите один вариант</output>
                                 </fieldset>
                             </div>
                             <hr>
                             <div class="f__list">
                                 <span class="f__label">Модель</span>
-                                <fieldset aria-required="true" class="--double">
+                                <fieldset aria-required="true" class="f__fieldset --double">
                                     <div class="radio">
                                         <input type="radio" name="model">
                                         <label>Pro Max</label>
@@ -116,6 +117,7 @@
                                         </div>
                                         <input type="text" class="other__inp" name="other" placeholder="Введите модель">
                                     </div>
+                                    <output class="f__err">Выберите один вариант</output>
                                 </fieldset>
                             </div>
                         </div>
@@ -125,7 +127,7 @@
                             <span class="num">2</span> Выберите память
                         </h3>
                         <div class="f__row">
-                            <fieldset aria-required="true" class="--double">
+                            <fieldset aria-required="true" class="f__fieldset --double">
                                 <div class="radio">
                                     <input type="radio" name="ram">
                                     <label>64</label>
@@ -150,6 +152,7 @@
                                     <input type="radio" name="ram">
                                     <label>2 TB</label>
                                 </div>
+                                <output class="f__err">Выберите один вариант</output>
                             </fieldset>
                             <hr>
                             <div class="f__descr">
@@ -167,7 +170,7 @@
                             <span class="num">3</span> Состояние аккумулятора
                         </h3>
                         <div class="f__row">
-                            <fieldset aria-required="true">
+                            <fieldset aria-required="true" class="f__fieldset">
                                 <div class="radio">
                                     <input type="radio" name="batery">
                                     <label>90%-100%</label>
@@ -180,6 +183,7 @@
                                     <input type="radio" name="batery">
                                     <label>70%-80%</label>
                                 </div>
+                                <output class="f__err">Выберите один вариант</output>
                             </fieldset>
                             <hr>
                             <div class="f__descr">
@@ -200,56 +204,57 @@
                             <span class="num">4</span> Выберите цвет
                         </h3>
                         <div class="f__row">
-                            <fieldset aria-required="true" class="--tripple">
+                            <fieldset aria-required="true" class="f__fieldset --tripple">
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="color">
                                     <label>Синий</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="color">
                                     <label>Розовый</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="color">
                                     <label>Серый</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="color">
                                     <label>Белый</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="color">
                                     <label>Зеленый</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="color">
                                     <label>Золотой</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="color">
                                     <label>Черный</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="color">
                                     <label>Фиолетовый</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="color">
                                     <label>Красный</label>
                                 </div>
+                                <output class="f__err">Выберите один вариант</output>
                             </fieldset>
                         </div>
                     </div>
                     <div class="f__col">
                         <h3 class="h_03 fieldset__label"><span class="num">5</span> Опишите дефекты (если есть)</h3>
-                        <div class="f__row">
+                        <fieldset class="f__row">
                             <p class="f__textarea-descr">
                                 Чем подробнее вы расскажете о внешнем состоянии вашего телефона тем меньше разочарований
                                 вас настигнет при очном осмотре
                             </p>
                             <textarea name="defects" class="f__textarea"
                                 placeholder="Опишите дефекты (если есть)"></textarea>
-                        </div>
+                        </fieldset>
                     </div>
                 </div>
 
@@ -259,19 +264,20 @@
                             <span class="num">7</span> Комплект
                         </h3>
                         <div class="f__row">
-                            <fieldset aria-required="true" class="--single">
+                            <fieldset aria-required="true" class="f__fieldset --single">
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="complect">
                                     <label>Полный комплект (коробка, кабель)</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="complect">
                                     <label>Телефон и оригинальный кабель</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="siries">
+                                    <input type="radio" name="complect">
                                     <label>Только телефон</label>
                                 </div>
+                                <output class="f__err">Выберите один вариант</output>
                             </fieldset>
                         </div>
                     </div>
@@ -279,15 +285,15 @@
                         <h3 class="h_03 fieldset__label"><span class="num">8</span> Выберите то, на что хотите поменять
                             свой телефон</h3>
                         <div class="f__row --single">
-                            <div class="f__input-wrap">
+                            <fieldset class="f__input-wrap">
                                 <label class="f__label" for="trade-in">Вставьте ссылку или id товара</label>
                                 <input class="f__input" type="text" name="trade-in" id="trade-in"
                                     placeholder="ID: 111111111">
-                            </div>
-                            <div class="f__mod">
+                            </fieldset>
+                            <fieldset class="f__mod">
                                 <p>Выберите модель:</p>
                                 <div class="radio_2">
-                                    <input type="radio" name="year">
+                                    <input type="radio" checked name="year">
                                     <label>2024</label>
                                 </div>
                                 <div class="radio_2">
@@ -302,29 +308,31 @@
                                     <input type="radio" name="year">
                                     <label>2021</label>
                                 </div>
-                            </div>
-                            <div class="f__mod">
+                                <output class="f__err">Выберите один вариант</output>
+                            </fieldset>
+                            <fieldset class="f__mod">
                                 <div class="radio_3">
-                                    <input type="radio" name="year">
+                                    <input type="radio" name="mark">
                                     <label>IPhone 16 Pro</label>
                                 </div>
                                 <div class="radio_3">
-                                    <input type="radio" name="year">
+                                    <input type="radio" checked name="mark">
                                     <label>iPhone 16e</label>
                                 </div>
                                 <div class="radio_3">
-                                    <input type="radio" name="year">
+                                    <input type="radio" name="mark">
                                     <label>IPhone 16 Plus</label>
                                 </div>
                                 <div class="radio_3">
-                                    <input type="radio" name="year">
+                                    <input type="radio" name="mark">
                                     <label>IPhone 16</label>
                                 </div>
                                 <div class="radio_3">
-                                    <input type="radio" name="year">
+                                    <input type="radio" name="mark">
                                     <label>IPhone 16 Pro Max</label>
                                 </div>
-                            </div>
+                                <output class="f__err">Выберите один вариант</output>
+                            </fieldset>
                         </div>
                     </div>
                 </div>
@@ -332,20 +340,23 @@
                 <div class="f__section --single bg">
                     <h3 class="h_03 fieldset__label"><span class="num">9</span> Заполните и отправьте форму</h3>
                     <div class="f__column">
-                        <div class="f__row --double">
+                        <fieldset class="f__row --double">
                             <input type="text" name="name" class="f__input" id="name" placeholder="Имя">
                             <input type="text" name="phone" class="f__input" id="phone" placeholder="Тел: +7">
-                        </div>
+                        </fieldset>
                         <button class="sect__btn" type="submit">Отправить</button>
                     </div>
-                    <div class="radio">
-                        <input type="checkbox" name="batery">
+                    <fieldset class="radio">
+                        <input type="checkbox" name="policy">
                         <label>Соглашаюсь с условиями обработки и использования персональных данных</label>
-                    </div>
+                        <output class="f__err">Чтобы продолжить установите флажок</output>
+                    </fieldset>
                 </div>
             </form>
         </section>
     </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -262,14 +262,14 @@
                 bottom: 18px
 
 .f
-    &__mod 
+    &__mod
         display: flex
         flex-wrap: wrap
         align-items: center
         gap: 10px 18px
         &>*
             margin: 0 !important
-    
+
     &__column
         display: flex
         gap: 20px
@@ -277,7 +277,7 @@
         .f__row
             flex: 1
 
-        .sect__btn 
+        .sect__btn
             min-width: 300px
 
     &__section
@@ -371,6 +371,9 @@
         &:placeholder
             color: #9C9C9C
 
+        &.--err
+            border-color: red
+
     &__textarea
         width: 100%
         border-radius: var(--br-xl)
@@ -385,6 +388,9 @@
             width: 163px
             font-size: 12px
             letter-spacing: 0.45px
+
+        &.--err
+            border-color: red
 
     @media screen and ( max-width: 1800px )
         &__section
@@ -445,53 +451,64 @@
                 min-width: 100%
                 width: 100%
 
-fieldset
-    display: flex
-    flex-wrap: wrap
-    width: fit-content
-    gap: 30px 25px
-    &.--single
-        padding-top: 14px
-        padding-bottom: 14px
-        &>*
-            width: 100%
-            min-width: 100%
-    &.--double
-        &>*
-            min-width: calc(50% - 12.5px)
-
-    &.--tripple
-        padding-top: 14px
-        padding-bottom: 14px
-        &>*
-            min-width: calc(33% - 16.666666666666668px)
-
-    @media screen and ( max-width: 992px )
-        &.--double
-            gap: 18px
-            &>*
-                min-width: calc((100% - 36px) / 3)
-
-    @media screen and ( max-width: 720px )
-        gap: 26px
-        width: 100%
-        &.--double,
-        &.--tripple
-            &>*
-                width: fit-content
-                min-width: unset
-
-    .other
-        // width: 100%
-        align-items: center
+.f
+    &__fieldset
         display: flex
         flex-wrap: wrap
-        gap: 20px 30px
-        &__inp
-            display: none
-            padding: 0 10px
-            font-size: 14px
-            min-height: unset
-            width: 130px
-            // min-width: 150px
-            height: 34px
+        width: fit-content
+        gap: 30px 25px
+        &.--single
+            padding-top: 14px
+            padding-bottom: 14px
+            &>*
+                width: 100%
+                min-width: 100%
+        &.--double
+            &>*
+                min-width: calc(50% - 12.5px)
+
+        &.--tripple
+            padding-top: 14px
+            padding-bottom: 14px
+            &>*
+                min-width: calc(33% - 16.666666666666668px)
+
+        @media screen and ( max-width: 992px )
+            &.--double
+                gap: 18px
+                &>*
+                    min-width: calc((100% - 36px) / 3)
+
+        @media screen and ( max-width: 720px )
+            gap: 26px
+            width: 100%
+            &.--double,
+            &.--tripple
+                &>*
+                    width: fit-content
+                    min-width: unset
+
+        .other
+            // width: 100%
+            align-items: center
+            display: flex
+            flex-wrap: wrap
+            gap: 20px 30px
+            &__inp
+                display: none
+                padding: 0 10px
+                font-size: 14px
+                min-height: unset
+                width: 130px
+                // min-width: 150px
+                height: 34px
+
+    &__err
+        display: none
+        width: 100% !important
+        color: red
+
+fieldset
+    &.--err
+        .f__err
+            display: block

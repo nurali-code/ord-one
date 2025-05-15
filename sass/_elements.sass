@@ -66,6 +66,11 @@ img
         top: 0
         left: 0
         cursor: pointer
+        &.--err
+            & + label
+                // color: red
+                &::before
+                    border-color: red
         &:checked
             & + label
                 &::after
