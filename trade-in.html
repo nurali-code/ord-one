@@ -112,10 +112,10 @@
                                     </div>
                                     <div class="other">
                                         <div class="radio">
-                                            <input type="radio" name="model">
+                                            <input type="radio" value="other" name="model">
                                             <label>Другое</label>
                                         </div>
-                                        <input type="text" class="other__inp" name="other" placeholder="Введите модель">
+                                        <input type="text" class="f__input other__inp" name="other" placeholder="Введите модель">
                                     </div>
                                     <output class="f__err">Выберите один вариант</output>
                                 </fieldset>
@@ -290,33 +290,35 @@
                                 <input class="f__input" type="text" name="trade-in" id="trade-in"
                                     placeholder="ID: 111111111">
                             </fieldset>
-                            <fieldset class="f__mod">
+
+                            <fieldset class="f__mod" data-year-select="true">
                                 <p>Выберите модель:</p>
                                 <div class="radio_2">
-                                    <input type="radio" checked name="year">
+                                    <input type="radio" value="2024" checked name="year">
                                     <label>2024</label>
                                 </div>
                                 <div class="radio_2">
-                                    <input type="radio" name="year">
+                                    <input value="2023" type="radio" name="year">
                                     <label>2023</label>
                                 </div>
                                 <div class="radio_2">
-                                    <input type="radio" name="year">
+                                    <input value="2022" type="radio" name="year">
                                     <label>2022</label>
                                 </div>
                                 <div class="radio_2">
-                                    <input type="radio" name="year">
+                                    <input value="2021" type="radio" name="year">
                                     <label>2021</label>
                                 </div>
                                 <output class="f__err">Выберите один вариант</output>
                             </fieldset>
-                            <fieldset class="f__mod">
+
+                            <fieldset class="f__mod" id="2024">
                                 <div class="radio_3">
                                     <input type="radio" name="mark">
                                     <label>IPhone 16 Pro</label>
                                 </div>
                                 <div class="radio_3">
-                                    <input type="radio" checked name="mark">
+                                    <input type="radio" name="mark">
                                     <label>iPhone 16e</label>
                                 </div>
                                 <div class="radio_3">
@@ -330,6 +332,75 @@
                                 <div class="radio_3">
                                     <input type="radio" name="mark">
                                     <label>IPhone 16 Pro Max</label>
+                                </div>
+                                <output class="f__err">Выберите один вариант</output>
+                            </fieldset>
+                            <fieldset class="f__mod" id="2023">
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 15 Pro</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>iPhone 15e</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 15 Plus</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 15</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 15 Pro Max</label>
+                                </div>
+                                <output class="f__err">Выберите один вариант</output>
+                            </fieldset>
+                            <fieldset class="f__mod" id="2022">
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 14 Pro</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>iPhone 14e</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 14 Plus</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 14</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 14 Pro Max</label>
+                                </div>
+                                <output class="f__err">Выберите один вариант</output>
+                            </fieldset>
+                            <fieldset class="f__mod" id="2021">
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 13 Pro</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>iPhone 13e</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 13 Plus</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 13</label>
+                                </div>
+                                <div class="radio_3">
+                                    <input type="radio" name="mark">
+                                    <label>IPhone 13 Pro Max</label>
                                 </div>
                                 <output class="f__err">Выберите один вариант</output>
                             </fieldset>

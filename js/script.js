@@ -43,3 +43,28 @@ $(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.f__mod[id]').hide();
+
+    var initialYear = $('.f__mod[data-year-select="true"] input[name="year"]:checked').val();
+    $('.f__mod#' + initialYear).show();
+
+    $('.f__mod[data-year-select="true"] input[name="year"]').on('change', function () {
+        $('.f__mod[id]').hide();
+        var selectedYear = $(this).val();
+        $('.f__mod#' + selectedYear).show();
+    });
+    
+    
+    // Hide other input initially
+    $('.other__inp').hide();
+
+    // Handle other radio button changes
+    $('input[name="model"]').on('change', function () {
+        if ($(this).val() === 'other' && $(this).is(':checked')) {
+            $('.other__inp').show();
+        } else {
+            $('.other__inp').hide();
+        }
+    });
+});

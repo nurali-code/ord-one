@@ -109,7 +109,8 @@ img
     input
         &:checked
             & ~ label
-                background-color: #fff
+                border-color: #000
+
 .sect
     font-family: "Ubuntu", sans-serif
     padding: 70px 0
@@ -135,15 +136,21 @@ img
 
     &__btn
         display: block
-        color: white
+        color: white !important
         text-align: center
         font-weight: 300
-        font-size: 18px
+        font-size: 16px
         line-height: 130%
-        padding: 15px 30px
+        padding: 8px 30px
         // min-height: 83px
-        background-color: #222
+        background-color: #353434
         border-radius: 7px
+        &:hover
+            background-color: #333
+
+        &:active
+            background-color: #979797
+            box-shadow: 0px 0px 15px 0px #00000040 inset
 
     &__input,
     &__textarea
