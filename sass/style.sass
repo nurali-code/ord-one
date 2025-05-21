@@ -260,6 +260,9 @@
                 bottom: 18px
 
 .f
+    &__container
+        max-width: 1328px
+
     &__mod
         display: flex
         flex-wrap: wrap
@@ -279,23 +282,36 @@
         .f__input
             height: 54px
 
-
     &__section
         flex-wrap: wrap
         display: flex
+        align-items: start
         gap: 40px 20px
         &.--single
             display: block
+            .f__row
+                min-height: unset
+
         &.--tripple
             &>*
-                width: calc( 60%/2 - 20px )
+                width: 42%
                 &:first-child
-                    width: 40%
+                    max-width: 461px
+
+                &:nth-child(2)
+                    max-width: 390px
+                &:nth-child(3)
+                    max-width: 330px
+
+            .f__row
+                min-height: 169px
+                align-items: start
+
         &.--double
             &>*
-                width: calc( 50% - 10px )
+                flex: 1
                 &:first-child
-                    // width: 50%
+                    max-width: 480px
 
     &__row
         background-color: #fff
@@ -309,6 +325,11 @@
             height: 90px
             align-self: center
             background-color: #494646
+
+        &.--none
+            padding: 13px 0 0
+            align-items: start
+            background-color: rgba(0, 0, 0, 0)
 
         &.--single
             flex-wrap: wrap
@@ -343,14 +364,14 @@
     &__descr
         color: #767575
         line-height: 120%
-        max-width: 200px
-        padding-left: 16px 
+        min-width: 175px
+        padding-left: 16px
         border-left: 1px solid rgba(#222, .2)
         &-heading
             font-weight: 300
             font-size: 16px
             line-height: 100%
-            margin: 0 0 8px
+            margin: 0 0 19px
 
         &-text
             font-weight: 200
@@ -390,10 +411,9 @@
         resize: none
         min-height: 129px
         &-descr
-            min-width: 163px
-            width: 163px
-            font-size: 12px
-            letter-spacing: 0.45px
+            min-width: 256px
+            width: 256px
+            font-size: 14px
             margin: 0 !important
 
         &.--err
@@ -402,16 +422,20 @@
         &:placeholder
             color: rgba(#222, .5)
 
-    @media screen and ( max-width: 1800px )
+    @media screen and ( max-width: 1330px )
         &__section
             &.--tripple
+                .f__row 
+                    min-height: unset
                 &>*
+                    max-width: 100% !important
                     width: calc( 50% - 10px )
                     &:first-child
                         width: calc( 50% - 10px )
 
                     &:last-child
                         width: 100%
+                        max-width: 100%
                         .f__row
                             align-items: center
 
@@ -438,15 +462,16 @@
     @media screen and ( max-width: 720px )
         &__section
             gap: 30px 20px
+            .f__row
+                flex: none
+                width: 100% !important
+            .f__col
+                flex: none
+                width: 100% !important
+                max-width: 100% !important
 
         &__row
-            padding: 24px 20px
             flex-direction: column
-            hr
-                height: 1px !important
-                width: 100%
-                margin: 0 auto !important
-                opacity: .4
 
         &__list
             width: 100% !important
@@ -455,7 +480,7 @@
             max-width: 100%
             width: 100%
             padding-left: 0
-            border-left: none 
+            border-left: none
             padding-top: 16px
             border-top: 1px solid rgba(#222, .2)
 
@@ -466,14 +491,27 @@
                 width: 100%
 
 .f
+    &__fieldset-col,
     &__fieldset
         display: flex
-        flex-wrap: wrap
         width: fit-content
-        gap: 16px 25px
+        gap: 16px
+
+    &__fieldset
+        align-self: center
+        flex-wrap: wrap
+        &-col
+            flex-direction: column
+            min-width: unset !important
+            width: calc( 100% - 104px )
+            &:first-child
+                width: 88px
+
+        &.--first
+            max-width: 116px
+
         &.--single
-            padding-top: 14px
-            padding-bottom: 14px
+            margin-bottom: auto
             &>*
                 width: 100%
                 min-width: 100%
@@ -482,8 +520,7 @@
                 min-width: calc(50% - 12.5px)
 
         &.--tripple
-            padding-top: 14px
-            padding-bottom: 14px
+          
             &>*
                 min-width: calc(33% - 16.666666666666668px)
 
@@ -501,20 +538,25 @@
                     width: fit-content
                     min-width: unset
 
+            &.--first
+                max-width: 100%
+
+            &-col 
+                width: 100% !important
+                display: contents
+
+
         .other
             width: 100%
-            align-items: center
-            display: flex
-            flex-wrap: wrap
             gap: 20px 30px
             &__inp
+                display: block
                 padding: 0 10px
                 flex: 1
                 font-size: 14px
                 min-height: unset
-                width: 130px
-                // min-width: 150px
                 height: 34px
+                margin-top: 8px
 
     &__err
         display: none

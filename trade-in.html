@@ -21,7 +21,7 @@
 
 
 <body>
-    <main class="container">
+    <main class="f__container container">
         <section class="sect">
             <div class="sect__headline">
                 <h1 class="sect__headline-h1">Выгодный Trade-In</h1>
@@ -62,7 +62,7 @@
                         <div class="f__row --first">
                             <div class="f__list">
                                 <span class="f__label">Серия</span>
-                                <fieldset aria-required="true" class="f__fieldset --double">
+                                <fieldset aria-required="true" class="f__fieldset  --first --double">
                                     <div class="radio">
                                         <input type="radio" name="siries">
                                         <label>11</label>
@@ -93,28 +93,34 @@
                             <div class="f__list">
                                 <span class="f__label">Модель</span>
                                 <fieldset aria-required="true" class="f__fieldset --double">
-                                    <div class="radio">
-                                        <input type="radio" name="model">
-                                        <label>Pro Max</label>
-                                    </div>
-                                    <div class="radio">
-                                        <input type="radio" name="model">
-                                        <label>Mini</label>
-                                    </div>
-                                    <div class="radio">
-                                        <input type="radio" name="model">
-                                        <label>Pro</label>
-                                    </div>
-                                    <div class="radio">
-                                        <input type="radio" name="model">
-                                        <label>Plus</label>
-                                    </div>
-                                    <div class="other">
+                                    <div class="f__fieldset-col">
                                         <div class="radio">
-                                            <input type="radio" value="other" name="model">
-                                            <label>Другое</label>
+                                            <input type="radio" name="model">
+                                            <label>Pro</label>
                                         </div>
-                                        <input type="text" class="f__input other__inp" name="other" placeholder="Введите модель">
+                                        <div class="radio">
+                                            <input type="radio" name="model">
+                                            <label>Pro Max</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="model">
+                                            <label>Plus</label>
+                                        </div>
+                                    </div>
+                                    <div class="f__fieldset-col">
+
+                                        <div class="radio">
+                                            <input type="radio" name="model">
+                                            <label>Mini</label>
+                                        </div>
+                                        <div class="other">
+                                            <div class="radio">
+                                                <input type="radio" value="other" name="model">
+                                                <label>Другое</label>
+                                            </div>
+                                            <input type="text" class="f__input other__inp" name="other"
+                                                placeholder="Введите модель">
+                                        </div>
                                     </div>
                                     <output class="f__err">Выберите один вариант</output>
                                 </fieldset>
@@ -157,7 +163,7 @@
                                 <h4 class="f__descr-heading">Где посмотреть?</h4>
                                 <p class="f__descr-text">
                                     Откройте "Настройки".
-                                    Перейдите в раздел "Аккумулятор".
+                                    Перейдите в раздел "Аккумулятор". <br>
                                     Выберите пункт "Состояние аккумулятора"
                                 </p>
                             </div>
@@ -187,7 +193,7 @@
                                 <h4 class="f__descr-heading">Где посмотреть?</h4>
                                 <p class="f__descr-text">
                                     Откройте "Настройки".
-                                    Перейдите в раздел "Аккумулятор".
+                                    Перейдите в раздел "Аккумулятор". <br>
                                     Выберите пункт "Состояние аккумулятора"
                                 </p>
                             </div>
@@ -244,7 +250,7 @@
                     </div>
                     <div class="f__col">
                         <h3 class="h_03 fieldset__label"><span class="num">5</span>Опишите дефекты (если есть)</h3>
-                        <fieldset class="f__row">
+                        <fieldset class="f__row --none">
                             <p class="f__textarea-descr">
                                 Чем подробнее вы расскажете о внешнем состоянии вашего телефона тем меньше разочарований
                                 вас настигнет при очном осмотре
