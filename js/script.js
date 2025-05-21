@@ -54,12 +54,19 @@ $(document).ready(function () {
         var selectedYear = $(this).val();
         $('.f__mod#' + selectedYear).show();
     });
-    
+
 
     // Add checked to "other" radio button if text is entered in .other__inp
     $('.other__inp').on('input', function () {
         if ($(this).val().trim() !== '') {
             $('input[name="model"][value="other"]').prop('checked', true);
+        }
+    });
+
+    $('input[type="radio"][name="mark"]').on('change', function () {
+        if ($(this).is(':checked')) {
+            var value = $(this).data('id');
+            $('input[data-place-id]').val('id: ' + value);
         }
     });
 });
