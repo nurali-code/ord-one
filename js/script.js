@@ -55,16 +55,11 @@ $(document).ready(function () {
         $('.f__mod#' + selectedYear).show();
     });
     
-    
-    // Hide other input initially
-    $('.other__inp').hide();
 
-    // Handle other radio button changes
-    $('input[name="model"]').on('change', function () {
-        if ($(this).val() === 'other' && $(this).is(':checked')) {
-            $('.other__inp').show();
-        } else {
-            $('.other__inp').hide();
+    // Add checked to "other" radio button if text is entered in .other__inp
+    $('.other__inp').on('input', function () {
+        if ($(this).val().trim() !== '') {
+            $('input[name="model"][value="other"]').prop('checked', true);
         }
     });
 });
