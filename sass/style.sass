@@ -425,7 +425,7 @@
     @media screen and ( max-width: 1330px )
         &__section
             &.--tripple
-                .f__row 
+                .f__row
                     min-height: unset
                 &>*
                     max-width: 100% !important
@@ -520,7 +520,7 @@
                 min-width: calc(50% - 12.5px)
 
         &.--tripple
-          
+
             &>*
                 min-width: calc(33% - 16.666666666666668px)
 
@@ -541,10 +541,9 @@
             &.--first
                 max-width: 100%
 
-            &-col 
+            &-col
                 width: 100% !important
                 display: contents
-
 
         .other
             width: 100%
@@ -560,10 +559,22 @@
 
     &__err
         display: none
-        width: 100% !important
+        min-width: 135px !important
         color: red
 
 fieldset
+    position: relative
+    z-index: 1
+    .f__err
+        position: absolute
+        top: 105%
+        font-size: 14px
+        line-height: 100%
+        background-color: #fff
+        box-shadow: 4px 0 10px 0 rgba(0, 0, 0, .1)
+        padding: 10px 
+        border-radius: 8px
+
     &.--err
         .f__err
             display: block
